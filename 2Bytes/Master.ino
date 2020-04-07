@@ -13,8 +13,8 @@ void loop()
 {
   
   Wire.beginTransmission(4); // transmit to device #4
-  buffer1 = send >> 8; //high order byte
-  buffer2 = send;      //lower order byte
+  buffer1 = send >> 8; //high order byte contoh kasus 258, ini dec(1) ; 256*1 + 2 = 258
+  buffer2 = send;      //lower order byte contoh kasus 256 ini dec(2)
   Wire.write(buffer1);              // sends one byte
   Wire.write(buffer2);  
   Wire.endTransmission();    // stop transmitting

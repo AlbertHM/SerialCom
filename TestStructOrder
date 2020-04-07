@@ -9,7 +9,7 @@ import serial
 def main(ser):
 	a = 258
 	while(True):
-		temp = ['>h',a]
+		temp = ['>h',a] #untuk lebih dari satu data, penulisan > cukup sekali, contoh '>hhh'
 		send = struct.pack(*temp)
 		print(str(a) + " " + str(send) + " " +str(struct.unpack(temp[0],send)))
 		time.sleep(1)
